@@ -13,8 +13,9 @@ const LeadGenForm: React.FC = () => {
     phone: '',
     city: '',
     state: '',
+    linkedinUrl: '',
     startDate: '',
-    experienceLevel: '',
+    ventureIdeaStage: '',
     reason: '',
   });
 
@@ -101,6 +102,19 @@ const LeadGenForm: React.FC = () => {
             </div>
           </div>
           <div className="mb-4">
+            <label htmlFor="linkedinUrl" className="block text-gray-700 font-bold mb-2">LinkedIn Profile URL</label>
+            <input
+              type="url"
+              id="linkedinUrl"
+              name="linkedinUrl"
+              value={formData.linkedinUrl}
+              onChange={handleChange}
+              placeholder="https://linkedin.com/in/..."
+              required
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+          <div className="mb-4">
             <label htmlFor="startDate" className="block text-gray-700 font-bold mb-2">Preferred Start Date</label>
             <select
               id="startDate"
@@ -118,19 +132,23 @@ const LeadGenForm: React.FC = () => {
             </select>
           </div>
           <div className="mb-4">
-            <label htmlFor="experienceLevel" className="block text-gray-700 font-bold mb-2">Current Experience Level</label>
-            <input
-              type="text"
-              id="experienceLevel"
-              name="experienceLevel"
-              value={formData.experienceLevel}
+            <label htmlFor="ventureIdeaStage" className="block text-gray-700 font-bold mb-2">Venture Idea Stage</label>
+            <select
+              id="ventureIdeaStage"
+              name="ventureIdeaStage"
+              value={formData.ventureIdeaStage}
               onChange={handleChange}
               required
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
+            >
+              <option value="">Select your current stage</option>
+              <option value="no_idea">No idea yet (that's okay!)</option>
+              <option value="early_ideas">One or more ideas, but not fully developed</option>
+              <option value="developed_idea">A well-thought-out idea I'm ready to pursue</option>
+            </select>
           </div>
           <div className="mb-4">
-            <label htmlFor="reason" className="block text-gray-700 font-bold mb-2">Tell us about your interest in starting a micro-business</label>
+            <label htmlFor="reason" className="block text-gray-700 font-bold mb-2">Why are you interested in starting a micro-business?</label>
             <textarea
               id="reason"
               name="reason"

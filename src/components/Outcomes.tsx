@@ -22,13 +22,6 @@ const Outcomes: React.FC = () => {
               </li>
             ))}
           </ul>
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold mb-4">Success Story</h3>
-            <p className="text-gray-600 italic">
-              "Thanks to Influent Ventures, I was able to validate my idea, build an MVP, and launch my micro-business in just 30 days. The support and resources provided were invaluable!"
-            </p>
-            <p className="text-gray-800 font-semibold mt-2">- Jane Doe, Founder of TechStartup</p>
-          </div>
         </div>
       </div>
     </section>
